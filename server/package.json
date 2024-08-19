@@ -8,7 +8,10 @@
     "test-watch": "jest --watch",
     "start": "node src/server.js",
     "watch": "nodemon src/server.js",
-    "cluster": "pm2 start src/server.js -i max"
+    "cluster": "pm2 start src/server.js -i max",
+    "deploy": "npm run build --prefix client && npm start --prefix server",
+    "deploy-cluster": "npm run build --prefix client && npm run cluster --prefix server",
+    "test": "npm test --prefix server && npm test --prefix client"
   },
   "author": "",
   "license": "ISC",
