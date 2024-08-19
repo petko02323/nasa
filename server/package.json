@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/server.js",
   "scripts": {
-    "test": "jest",
+    "build": "npm run build --prefix client",
     "test-watch": "jest --watch",
     "start": "node src/server.js",
     "server": "npm run watch --prefix server",
